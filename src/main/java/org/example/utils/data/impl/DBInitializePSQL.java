@@ -52,11 +52,10 @@ public class DBInitializePSQL implements DBInitializer {
         try(Connection connection = dbConnection.getConnect();
             Statement statement = connection.createStatement()) {
             statement.executeUpdate(psqlQuery);
-            System.out.println("созронение таблиц прошло успешно");
+            System.out.println("создание таблиц прошло успешно");
         }catch (SQLException e){
             throw new RuntimeException(e);
         }
     }
-
 
 }

@@ -6,15 +6,15 @@ import java.util.Objects;
 public class Product {
     private int id;
     private String name;
-    private String description;
     private double price;
-    private int quantity;
+    private String volume;
     private int categoryId;
-    private boolean isActive;
+    private boolean inStock;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
     public Product(){}
+
 
     public int getId() {
         return id;
@@ -32,14 +32,6 @@ public class Product {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -48,12 +40,12 @@ public class Product {
         this.price = price;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getVolume() {
+        return this.volume;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setVolume(String volume) {
+        this.volume = volume;
     }
 
     public int getCategoryId() {
@@ -64,12 +56,12 @@ public class Product {
         this.categoryId = categoryId;
     }
 
-    public boolean isActive() {
-        return isActive;
+    public boolean inStock() {
+        return inStock;
     }
 
-    public void setActive(boolean active) {
-        isActive = active;
+    public void inStock(boolean inStock) {
+        this.inStock = inStock;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -107,5 +99,9 @@ public class Product {
     @Override
     public String toString() {
         return this.name;
+    }
+
+    public String infoProduct(){
+        return "    %s  %.2f - сом %s".formatted(this.name, this.price, this.volume);
     }
 }
