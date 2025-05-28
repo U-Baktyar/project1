@@ -7,6 +7,6 @@ public class HelpCommand implements Command {
     public void command() {
         System.out.println("exit - выход из системы");
         System.out.println("help - вывод списка комманд");
-        System.out.println("all_product - покозать все продукты");
+        System.out.println("all_products - покозать все продукты");
     }
 }

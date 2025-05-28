@@ -11,6 +11,6 @@ public class GetProductCommand implements Command {
     }
     @Override
     public void command() {
-        productController.getAllProduct();
+        productController.getAllProducts();
     }
 }

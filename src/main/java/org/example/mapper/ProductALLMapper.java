@@ -1,7 +1,6 @@
 package org.example.mapper;
 
 import org.example.model.product.Product;
-import org.example.model.user.User;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

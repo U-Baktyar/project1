@@ -33,7 +33,7 @@ public class CommandRegistry {
     private void register() {
         commands.put("exit", new ExitCommandCreate());
         commands.put("help", new HelpCommandCreate());
-        commands.put("all_product", new GetProductCommandCreate());
+        commands.put("all_products", new GetProductCommandCreate());
     }
 
     public CommandFactory getCommandFactory(String commandName) {

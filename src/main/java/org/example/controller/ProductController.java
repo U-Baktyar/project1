@@ -4,9 +4,8 @@ package org.example.controller;
 import org.example.exception.ProductNotFoundException;
 import org.example.model.product.Product;
 import org.example.service.ProductService;
-import org.example.service.impl.ProductAllService;
+import org.example.service.impl.ProductServiceImpl;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +16,7 @@ public class ProductController {
         if (instance == null) {
             synchronized (ProductController.class) {
                 if (instance == null) {
-                    instance = new ProductController(new ProductAllService());
+                    instance = new ProductController(new ProductServiceImpl());
                 }
             }
         }
@@ -29,7 +28,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    public void getAllProduct(){
+    public void getAllProducts(){
         try {
             Map<String, List<Product>> products = productService.getAllProducts();
 

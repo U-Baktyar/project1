@@ -51,7 +51,7 @@ public class ProductMapDAO implements ProductDAO {
                    p.name AS product_name,
                    p.price AS product_price,
                    p.volume AS product_volume
-            FROM product p
+            FROM products p
             JOIN category c ON c.id = p.category_id
             """;
 
